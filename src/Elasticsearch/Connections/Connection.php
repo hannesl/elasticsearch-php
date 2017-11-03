@@ -205,7 +205,7 @@ class Connection implements ConnectionInterface
 
                         $this->logRequestFail(
                             $request['http_method'],
-                            $response['effective_url'],
+                            '', // $response['effective_url'],
                             $request['body'],
                             $request['headers'],
                             $response['status'],
@@ -250,7 +250,7 @@ class Connection implements ConnectionInterface
                         $exception = new TransportException($response['error']->getMessage());
                         $this->logRequestFail(
                             $request['http_method'],
-                            $response['effective_url'],
+                            '', // $response['effective_url'],
                             $request['body'],
                             $request['headers'],
                             $response['status'],
@@ -281,7 +281,7 @@ class Connection implements ConnectionInterface
                 }
                 $this->logRequestSuccess(
                     $request['http_method'],
-                    $response['effective_url'],
+                    '', // $response['effective_url'],
                     $request['body'],
                     $request['headers'],
                     $response['status'],
@@ -612,7 +612,7 @@ class Connection implements ConnectionInterface
 
         $this->logRequestFail(
             $request['http_method'],
-            $response['effective_url'],
+            '', // $response['effective_url'],
             $request['body'],
             $request['headers'],
             $response['status'],
@@ -658,7 +658,7 @@ class Connection implements ConnectionInterface
 
         $this->logRequestFail(
             $request['http_method'],
-            $response['effective_url'],
+            '', // $response['effective_url'],
             $request['body'],
             $request['headers'],
             $response['status'],
